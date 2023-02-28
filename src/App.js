@@ -1,23 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
 
+import ResponsiveAppBar from './Men/Hedar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Provider } from 'react-redux';
+import storetitle from './ReduxToolkit/Store/Storetitle';
+import Countertool from './ReduxToolkit/Countertool';
+import Footer from './Men/Footer';
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <ResponsiveAppBar/>
+  
+    
+    <Provider store={storetitle}>
+        <Countertool/>
+        <Footer/>
+     </Provider>
+     <br/>
+
+    
+
     </div>
   );
 }
