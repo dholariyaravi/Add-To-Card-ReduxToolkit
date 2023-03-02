@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import storetitle from './ReduxToolkit/Store/Storetitle';
 import Countertool from './ReduxToolkit/Countertool';
 import Footer from './Men/Footer';
+import Counter1 from './ReduxToolkit/Counter/Counter1';
 
 function App() {
   return (
@@ -16,10 +17,16 @@ function App() {
   
     
     <Provider store={storetitle}>
+        <Counter1/>
+        
         <Countertool/>
         <Footer/>
+
      </Provider>
+
      <br/>
+  
+
 
     
 
