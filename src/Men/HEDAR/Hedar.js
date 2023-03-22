@@ -16,6 +16,8 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import {useSelector} from 'react-redux'
+
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -57,9 +59,15 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
-export default function Home() {
+export default function Hedar() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+
+  
+
+    const addddata1 = useSelector((p) => p.ADD1);
+ 
+    console.log(addddata1.item.length);
 
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -102,6 +110,7 @@ export default function Home() {
             <MenuItem onClick={handleMenuClose}>My account</MenuItem>
         </Menu>
     );
+    // -------------------------------------- mobileMenuId--------------------------------------------- 
 
     const mobileMenuId = 'primary-search-account-menu-mobile';
     const renderMobileMenu = (
@@ -122,7 +131,7 @@ export default function Home() {
         >
             <MenuItem>
                 <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                    <Badge badgeContent={4} color="error">
+                    <Badge badgeContent={addddata1.item?.length} color="error">
                         <AddShoppingCartIcon />
                     </Badge>
                 </IconButton>
@@ -134,7 +143,7 @@ export default function Home() {
                     aria-label="show 15 new notifications"
                     color="inherit"
                 >
-                    <Badge badgeContent={15} color="error">
+                    <Badge badgeContent={addddata1.item?.length} color="error">
                         <NotificationsIcon />
                     </Badge>
                 </IconButton>
@@ -176,6 +185,7 @@ export default function Home() {
                     >
                         MUI
                     </Typography>
+                    
                     <Search>
                         <SearchIconWrapper>
                             <SearchIcon />
@@ -185,10 +195,35 @@ export default function Home() {
                             inputProps={{ 'aria-label': 'search' }}
                         />
                     </Search>
+                    <Typography class='p-2'
+                        variant="h6"
+                        noWrap
+                        component="div"
+                        sx={{ display: { xs: 'none', sm: 'block' } }}
+                    >
+                        Products
+                    </Typography>
+                    <Typography class='p-2'
+                        variant="h6"
+                        noWrap
+                        component="div"
+                        sx={{ display: { xs: 'none', sm: 'block' } }}
+                    >
+                        Abunt
+                    </Typography>
+                    <Typography class='p-2'
+                        variant="h6"
+                        noWrap
+                        component="div"
+                        sx={{ display: { xs: 'none', sm: 'block' } }}
+                    >
+                        Contact
+                    </Typography>
+
                     <Box sx={{ flexGrow: 1 }} />
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                            <Badge badgeContent={5} color="error">
+                            <Badge badgeContent={0} color="error">
                                 <MailIcon />
                             </Badge>
                         </IconButton>
@@ -197,7 +232,7 @@ export default function Home() {
                             aria-label="show 17 new notifications"
                             color="inherit"
                         >
-                            <Badge badgeContent={15 } color="error">
+                            <Badge badgeContent={addddata1.item?.length} color="error">
                                 <AddShoppingCartIcon />
                             </Badge>
                         </IconButton>
@@ -222,7 +257,9 @@ export default function Home() {
                             onClick={handleMobileMenuOpen}
                             color="inherit"
                         >
+                            <Badge badgeContent={addddata1.item?.length} color='error'>
                             <AddShoppingCartIcon />
+                            </Badge>
                         </IconButton>
                     </Box>
 

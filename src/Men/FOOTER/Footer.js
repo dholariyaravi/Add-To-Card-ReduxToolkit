@@ -3,7 +3,7 @@ import './Footer.css';
 
  function Footer() {
   return (
-    <footer class="padding_4x">
+    <footer class="padding_4x ">
     <div class="flex">
       <section class="flex-content padding_1x">
         <h3>Top Products</h3>
@@ -41,10 +41,10 @@ import './Footer.css';
     </div>
     <div class="flex">
       <section class="flex-content padding_1x">
-        <p>Copyright ©2023 All rights reserved || website name</p>
+        <p>designing ©2023 All rights reserved ||  addToCart</p>
       </section>
       <section class="flex-content padding_1x">
-        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
         <a href="#"><i class="fa fa-twitter"></i></a>
         <a href="#"><i class="fa fa-dribbble"></i></a>
         <a href="#"><i class="fa fa-linkedin"></i></a>

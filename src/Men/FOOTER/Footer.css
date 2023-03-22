@@ -75,14 +75,14 @@ fieldset{
 .padding_4x{
     padding:4rem;
 }
-
+/* 
 .btn{
     padding:0.8rem 2rem;
     border-radius:5px;
     text-align:center;
     font-weight:500;
     text-transform:uppercase;
-}
+} */
 
 .btn_1{
     border:1px solid var(--primary);
@@ -220,4 +220,20 @@ footer .flex:last-child a:hover{
         flex:1 1 100%;
     }
 }
+/* =================================== >>>>  */
+
+/* footer:hover{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+} */
+
+
+
+
 
