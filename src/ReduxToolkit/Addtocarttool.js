@@ -44,7 +44,6 @@ const Addtocarttool = createSlice({
 
           }
 
-
           state.item = array;
     },
     increment : (state) => {

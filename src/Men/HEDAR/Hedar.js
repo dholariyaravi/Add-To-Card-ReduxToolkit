@@ -64,10 +64,9 @@ export default function Hedar() {
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
   
-
     const addddata1 = useSelector((p) => p.ADD1);
- 
     console.log(addddata1.item.length);
+    
 
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
