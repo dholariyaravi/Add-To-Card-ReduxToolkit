@@ -11,9 +11,10 @@ const storetitle = configureStore ({
     reducer : {
          post1 : Reducertoool,
 
-         ADD1 : Addtocarttool
+         ADD1 : Addtocarttool,
 
-        // count1 : Reduger,
+        count1 : Reduger,
+         
 
 
     }
